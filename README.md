@@ -10,4 +10,33 @@ The motivation for this is I work across three machines, so to prevent the scree
 python MouseJiggle.py
 ```
 
+Once triggered in the Terminal / Bash / Powershell or CMD the script will fire and you will see the mouse moving on your machine. The output will look as follows:
+
+
+```{python}
+Please specify a wait time integer? 5
+--------------------------------------------------------------------------------
+[INFO] action triggered by Gary.Hutson. About to move the mouse... 
+Cursor moved to x: 25y: 383
+[INFO Cursor has been moved.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+[INFO] action triggered by Gary.Hutson. About to move the mouse... 
+Cursor moved to x: 454y: 193
+[INFO Cursor has been moved.]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+[INFO] action triggered by Gary.Hutson. About to move the mouse... 
+Cursor moved to x: 343y: 499
+[INFO Cursor has been moved.]
+--------------------------------------------------------------------------------
+-
+
+```
+
+The mouse will start to move and you can enjoy some peace and quiet. 
+
+## Breaking out of the script
+
+To break out of the script running in the terminal you need to press CTRL + C, which is the keyboard interrupt commands to exit the script. This works on every script from Python to R. When you do this you will receive an informative message saying that it has now terminated the script.
 
