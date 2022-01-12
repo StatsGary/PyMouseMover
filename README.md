@@ -5,7 +5,9 @@ The motivation for this is I work across three machines, so to prevent the scree
 
 ## Triggering the tool
 
-'''{python}
+```{python}
 # Run this in the terminal
 python MouseJiggle.py
-'''
+```
+
+
