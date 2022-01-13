@@ -1,9 +1,15 @@
 """ 
-Name:       MouseJiggle.py
+Name:       MouseJiggleAP.py
 Author:     Gary Hutson
 Date:       12/01/2022
 Purpose:    Jiggling mouse when inactive to appear active on Slack and MS Teams
             Helps when working across two machines and not being monitored
+
+Usage:      python MouseJiggleAP.py --wait 5
+            (Command to run in terminal, prompt or PS window)
+            Waits for 5 seconds before looping through next mouse location
+
+            python MouseJiggleAP.py --wait 10
 """
 
 import pyautogui
@@ -15,10 +21,13 @@ import argparse as ap
 
 
 USERNAME = getpass.getuser()
-#Create argument parser to sort out the wait time
+#Create argument parser to sort out the wait time\
+
+# Create argument parser to define wait time
 parser = ap.ArgumentParser()
-parser.add_argument('-w', '--wait', required=True, help='Wait time for mouse mover')
-args = vars(ap.parse_args())
+parser.add_argument('-w', '--wait', required=True, 
+        help='Wait time for mouse mover')
+args = vars(parser.parse_args())
 
 WAIT_TIME = int(args['wait'])
 
@@ -35,7 +44,7 @@ while(True):
         print('-' * 80)
         time.sleep(WAIT_TIME)
     except KeyboardInterrupt:
-        print('CTRL + C pressed and keyboard interupt terminated by {}!'.format(USERNAME))
+        print('\nCTRL + C pressed and keyboard interupt terminated by {}!'.format(USERNAME))
         break
 
 
