@@ -22,7 +22,7 @@ while(True):
         print('-' * 80)
         print('[INFO] action triggered by {}. About to move the mouse... '.format(USERNAME))
         pyautogui.moveTo(x,y)
-        output_string = 'Cursor moved to x: ' + str(x) + 'y: ' + str(y)
+        output_string = 'Cursor moved to x: ' + str(x) + ' y: ' + str(y)
         print(output_string)
         print('[INFO Cursor has been moved.]')
         print('-' * 80)
